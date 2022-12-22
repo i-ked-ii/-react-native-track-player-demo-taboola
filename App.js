@@ -120,7 +120,7 @@ function Playlist() {
     loadPlaylist();
   }
 
-  const publisher = Platform.OS === 'android' ? 'atime-android' : 'atime-ios';
+  const publisher = Platform.OS === 'ios' ? 'sdk-tester' : 'sdk-tester';
 
   return (
     <View>
@@ -143,11 +143,11 @@ function Playlist() {
         TEST 2
       </Text>
       <RNTaboolaView
-        mode="thumbnails-a-1x1"
+        mode="thumbnails-a"
         publisher={publisher}
         pageType="article"
-        pageUrl="https://atime.live"
-        placement="Below Article Thumbnails 1x1"
+        pageUrl="https://blog.taboola.com"
+        placement="Feed without video"
         targetType="mix"
         style={{height, width: '100%'}}
         viewID="12345"
