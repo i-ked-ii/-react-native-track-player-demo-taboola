@@ -1,5 +1,6 @@
 # react-native-track-player-demo
 A music track player app with a pre-defined playlist
+example player from [repo](https://github.com/codezri/react-native-track-player-demo)
 
 ## Preview
 
