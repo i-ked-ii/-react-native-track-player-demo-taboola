@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {
   SafeAreaView,
   ScrollView,
+  Platform,
   StyleSheet,
   Text,
   View,
@@ -119,6 +120,8 @@ function Playlist() {
     loadPlaylist();
   }
 
+  const publisher = Platform.OS === 'android' ? 'atime-android' : 'atime-ios';
+
   return (
     <View>
       <View style={styles.playlist}>
@@ -140,11 +143,11 @@ function Playlist() {
         TEST 2
       </Text>
       <RNTaboolaView
-        mode="alternating-widget-without-video-1-on-1"
-        publisher="sdk-tester"
+        mode="thumbnails-a-1x1"
+        publisher={publisher}
         pageType="article"
-        pageUrl="https://blog.taboola.com"
-        placement="Mid Article"
+        pageUrl="https://atime.live"
+        placement="Below Article Thumbnails 1x1"
         targetType="mix"
         style={{height, width: '100%'}}
         viewID="12345"
